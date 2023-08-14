@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a49687b1.css",
+    "main.js": "/static/js/main.be3a8a1b.js",
+    "static/js/787.54593029.chunk.js": "/static/js/787.54593029.chunk.js",
+    "static/media/moutains01.jpg": "/static/media/moutains01.5cd28d908683bfc7c8bc.jpg",
+    "index.html": "/index.html",
+    "main.a49687b1.css.map": "/static/css/main.a49687b1.css.map",
+    "main.be3a8a1b.js.map": "/static/js/main.be3a8a1b.js.map",
+    "787.54593029.chunk.js.map": "/static/js/787.54593029.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a49687b1.css",
+    "static/js/main.be3a8a1b.js"
+  ]
+}
