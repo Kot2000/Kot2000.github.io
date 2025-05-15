@@ -1,0 +1,88 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #070000;
+    color: #ffefef;
+    font-weight: 400;
+    padding: 50px;
+    justify-content: center;
+}
+
+#buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile img {
+    width: 128px;
+    height: 128px;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.sep {
+    width: 100%;
+    height: 0;
+    border-top: 5px rgba(255, 255, 255, 10%) solid;
+}
+
+.project {
+    width: 100%;
+}
+
+.project {
+    position: relative;
+    border: 5px rgba(255, 255, 255, 10%) solid;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    transition: ease-out .2s background-color;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project:hover {
+    background-color:rgba(255, 255, 255, 10%);
+}
+
+.project-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2.5em;
+    color: white;
+}
+
+.project-desc {
+    position: absolute;
+    top: calc(2.5em + 20px);
+    left: calc(20px);
+    font-size: 1.4em;
+    color: white;
+}
+
+.project-hahahoho {
+    position: absolute;
+    bottom: calc(20px);
+    right: calc(20px);
+    font-size: 1em;
+    font-style: italic;
+    color: gray;
+    text-decoration: underline;
+}

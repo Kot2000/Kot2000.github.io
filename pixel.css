@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+:root {
+  --button-bg: #3c8527;
+  --button-hover-bg: rgba(29, 73, 20, 1);
+  --button-border: #639d52;
+  --button-box-shadow: rgba(29, 73, 20, 1);
+  --button-active-bg: rgba(29, 73, 20, 1);
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 10, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0;
+}
+
+.check {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAFCAYAAACJmvbYAAAAHElEQVQImWNgwAH+////H78EugoMHTABwkYhAQBzgBvlIdDSYgAAAABJRU5ErkJggg==")
+}
+
+.fade-out {
+  image-rendering: pixelated;
+  opacity: 0;
+  animation: fadeOutAnimation 1s;
+  pointer-events: none;
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.thunder-logo {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAZElEQVQ4jaXPMQ6AIAxA0V8TVo7D/WeOw8qAk0QRKy1dy/spoEwtqdWSmvbm0LAG1cAqngYs+BWw4kfAg3vAiwFkB/cLdka05d91IWZxXxBiFnB+4cKuwB2bAyM2BWZ4OfCFAU6pOyWDy293FwAAAABJRU5ErkJggg==") no-repeat;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  width: 125px;
+  height: 125px;
+  image-rendering: pixelated;
+  animation: fadeAnimation 1s infinite;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.magical-button {
+  --button-bg: #7345e5;
+  --button-hover-bg: #4a1cac;
+  --button-border: #8e49eb;
+  --button-box-shadow: #4a1cac;
+  --button-active-bg: #4a1cac;
+}
+
+button {
+  position: relative;
+  background: var(--button-bg);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  min-width: 250px;
+  border: var(--button-border) 3px solid;
+  -webkit-box-shadow: 0px 6px 0px 0px var(--button-box-shadow);
+  -moz-box-shadow: 0px 6px 0px 0px var(--button-box-shadow);
+  box-shadow: 0px 6px 0px 0px var(--button-box-shadow);
+  margin: 0px 8px 11px 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-hover-bg);
+}
+
+button:active {
+  top: 6px;
+  background: var(--button-active-bg);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+button:active::before {
+  height: calc(100% + 10px);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px + 6px);
+  border: #1e1e1f 3px solid;
+}
+
+.checkbox {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: calc(60px - 3px);
+  height: calc(27px - 3px);
+  background: #8c8d90;
+  border: #97989b 3px solid;
+  user-select: none;
+}
+
+.checkbox * {
+  user-select: none;
+}
+
+.checkbox::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 11px);
+  border: #1e1e1f 3px solid;
+}
+
+.checkbox > .switch {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -3px;
+  width: 30px;
+  height: 24px;
+  background: #b1b2b5;
+  border: #eff0f0 3px solid;
+  -webkit-box-shadow: 0px 6px 0px 0px #58585a;
+  -moz-box-shadow: 0px 6px 0px 0px #58585a;
+  box-shadow: 0px 6px 0px 0px #58585a;
+  margin: 0px 8px 11px 0px;
+  transition: left 0.1s ease;
+}
+
+.checkbox:hover > .switch {
+  background: #58585a;
+}
+
+.checkbox > .switch::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  width: calc(100% + 11px);
+  height: calc(100% + 11px + 6px);
+  border: #1e1e1f 3px solid;
+}
+
+.checkbox > input:checked ~ .switch::before {
+  left: -5.5px;
+}
+
+.checkbox > input {
+  opacity: 0;
+}
+
+.checkbox > input:checked ~ .switch {
+  bottom: -8px;
+  left: 25px;
+}
+
+.checkbox > input:active ~ .switch {
+  bottom: -14px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.checkbox > input:active ~ .switch::before {
+  height: calc(100% + 11px);
+}
+
+.checkbox > div {
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 5px);
+  background: #8c8d90;
+  border: #97989b 3px solid;
+  pointer-events: none;
+  display: block;
+}
+
+.checkbox > input:checked ~ div {
+  background: #3c8527;
+  border: #639d52 3px solid;
+}
+
+.checkbox > .label {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  display: inline-block;
+  width: 400px;
+  color: #1e1e1f;
+}
