@@ -21,11 +21,10 @@
   z-index: 999;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 10, 100%);
+  background: #070000;
   display: flex;
   justify-content: center;
   align-items: center;
-  scale: 0;
 }
 
 .check {
@@ -49,7 +48,7 @@
 }
 
 .thunder-logo {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAZElEQVQ4jaXPMQ6AIAxA0V8TVo7D/WeOw8qAk0QRKy1dy/spoEwtqdWSmvbm0LAG1cAqngYs+BWw4kfAg3vAiwFkB/cLdka05d91IWZxXxBiFnB+4cKuwB2bAyM2BWZ4OfCFAU6pOyWDy293FwAAAABJRU5ErkJggg==") no-repeat;
+  background: url("https://avatars.githubusercontent.com/u/63430490?s=400&u=d1700dae8eca2c1375925b0d1f63fd2bba3a7090&v=4") no-repeat;
   background-size: 100% 100%;
   image-rendering: pixelated;
   width: 125px;
