@@ -1,6 +1,12 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+    scrollbar-color: #d1d1d1 #070000;
+    scrollbar-width: auto;
 }
 
 body {
@@ -35,13 +41,24 @@ body {
     -ms-interpolation-mode: nearest-neighbor;
 }
 
+#topbar {
+    position: sticky !important;
+    left: 0;
+    top: 0;
+    background-color: #070000;
+    z-index: 9;
+}
+
 .sep {
     width: 100%;
     height: 0;
     border-top: 5px rgba(255, 255, 255, 10%) solid;
 }
 
-.project {
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
 }
 
@@ -57,13 +74,29 @@ body {
     text-decoration: none;
 }
 
+.project *, .project * * {
+    color: white;
+    text-decoration: none;
+}
+
+.proj-h::before {
+    position: absolute;
+    top: calc(53px);
+    right: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    border-top: #FF0000 1px solid;
+}
+
 .project:hover {
     background-color:rgba(255, 255, 255, 10%);
 }
 
 .project-header {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
     font-size: 2.5em;
     color: white;
@@ -85,4 +118,42 @@ body {
     font-style: italic;
     color: gray;
     text-decoration: underline;
+}
+
+.symbol-link {
+    display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMElEQVQYlWNgIAAYGRgYGP7///8fqyQjIyNOnTBNTLgk8OrCqhBdAIWPzVi8ViEDAP02I+R0sg3CAAAAAElFTkSuQmCC) no-repeat;
+    background-size: 32px;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    width: 32px;
+    height: 32px;
+}
+
+.project .symbol-link {
+    position: absolute;
+    top: calc(20px);
+    right: calc(20px);
+}
+
+.project-types {
+    position: absolute;
+    bottom: calc(20px);
+    left: calc(20px);
+    text-decoration: none;
+}
+
+#projects-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#filters {
+    user-select: none;
+    cursor: pointer;
 }
